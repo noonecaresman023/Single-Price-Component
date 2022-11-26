@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+/* font-family: 'Karla', sans-serif; 400,700 */
+
+:root {
+    --subscribe-color: rgb(43, 179, 177);
+    --question-color: rgb(74, 190, 189);
+    --bright-yellow: hsl(71, 73%, 54%);
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/** MOBILE FIRST DESIGN ORIENTED **/
+
+main {
+    max-width: 375px;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--light-gray);
+    min-height: 100vh;
+    padding: 1em;
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+}
+
+section {
+    padding: 2em;
+    box-shadow: none;
+}
+
+.grid-container {
+    display: grid;
+}
+
+/** Join Our Community **/
+.community-grid {
+    background-color: white;
+    color: var(--grayish-blue);
+    line-height: 1.5;
+    text-align: left;
+    border-radius: 10px 10px 0 0;
+}
+
+.h3-community-join {
+    color: var(--subscribe-color);
+}
+
+.h3-community-guarantee {
+    color: var(--bright-yellow);
+    padding: 1rem 0 1rem 0;
+}
+
+/** Monthly Subscription **/
+.subscribe-grid {
+    color: white;
+    /*text color to white*/
+}
+
+.price-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.payment-frequency {
+    padding: 1rem;
+    color: rgb(217, 217, 217);
+}
+
+/*for "$29" style */
+.monthly-price {
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.btn {
+    display: block;
+    font-weight: 700;
+    background-color: var(--bright-yellow);
+    padding: 1em;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 2rem;
+    text-decoration: none;
+    color: white;
+}
+
+.btn:hover{
+    cursor: pointer;
+    background-color: hsl(71, 61%, 47%);
+}
+
+.subscribe-grid {
+    background-color: var(--subscribe-color);
+}
+
+
+/** Why Us **/
+.question-grid {
+    color: white;
+    border-radius: 0 0 10px 10px;
+    background-color: var(--question-color);
+}
+
+.benefits-list {
+    list-style: none;
+    color: hsl(204, 43%, 93%);
+    padding-top: 1rem;
+}
+
+/**----------footer design-----------*/
+footer{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    gap: 1%;
+    top: 100%;
+}
+
+footer p, a{
+    font-family: 'Lexend Deca', sans-serif; ;
+}
+footer a{
+    text-decoration: none;
+    color: gray;
+}
+
+
+@media screen and (min-width: 770px) {
+    main {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .grid-container{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto ;
+    }
+
+    .community-grid{
+        grid-column: 1 /span 3;
+    }
+
+    .subscribe-grid{
+        border-bottom-left-radius: 10px;
+    }
+
+    .question-grid{
+        border-radius: 0 0 10px 0;
+    }
+
+    footer{
+        flex-direction: row;
+    }
+
+
+}
